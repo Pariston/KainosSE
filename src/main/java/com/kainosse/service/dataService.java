@@ -30,6 +30,10 @@ public class dataService {
         return em.createQuery("SELECT row FROM data row").getResultList();
     }
 
+    public List<data> getDataBetween(String older, String newer) {
+        return em.createQuery("SELECT row FROM data row WHERE date > \'" + older + "\'" + " AND date < \'" + newer + "\'").getResultList();
+    }
+
     public void closeAll() {
         em.close();
         emfactory.close();

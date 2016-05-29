@@ -1,0 +1,30 @@
+<div class="announcement">
+    from <input type="date" [(ngModel)]="fromHandDate" /> to <input type="date" [(ngModel)]="toHandDate" />
+    <input type="submit" (click)="setRangeForChart()" value="Set range"/>
+</div>
+<div class="chartSpace" *ngIf="partData">
+    <div class="centerContainer">
+        <div class="chartContainer">
+            <base-chart class="chart"
+                        [datasets]="chartValues"
+                        [labels]="chartMonths"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColours"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)"></base-chart>
+        </div>
+    </div>
+</div>
+<div class="centerContainer">
+    <p-dataTable *ngIf="partData"   [value]="partData" [rows]="30"
+                 [paginator]="true" [pageLinks]="3"
+                 [lazy]="true"
+                 [totalRecords]="totalRecords" (onLazyLoad)="loadCarsLazy($event)">
+        <header>All stack exchange data</header>
+        <p-column field="id" header="Id" [filter]="true"></p-column>
+        <p-column field="date" header="Date" [filter]="true"></p-column>
+        <p-column field="value" header="Value" [filter]="true"></p-column>
+    </p-dataTable>
+</div>

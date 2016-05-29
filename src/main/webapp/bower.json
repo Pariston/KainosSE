@@ -15,7 +15,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^2.2.4",
-    "Chart.js": "^1.0.2"
+    "jquery": "^2.2.4"
   }
 }

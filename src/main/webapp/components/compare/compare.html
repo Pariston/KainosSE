@@ -1,0 +1,22 @@
+<div class="announcement">
+    Set range from <input type="date" [(ngModel)]="fromHandDate" /> to <input type="date" [(ngModel)]="toHandDate" />
+    <input type="submit" (click)="setRangeForChart()" value="Set range"/><br /><br />
+    Set start value <input type="number" [(ngModel)]="startInvestmentValue" placeholder="Start investment value" />
+    <input type="submit" (click)="refreshChart()" value="Set value" />
+    <p *ngIf="fundUnit">Available units: {{fundUnit}}</p>
+</div>
+<div class="chartSpace" *ngIf="allData">
+    <div class="centerContainer">
+        <div class="chartContainer">
+            <base-chart class="chart"
+                        [datasets]="chartValues"
+                        [labels]="chartMonths"
+                        [options]="lineChartOptions"
+                        [colors]="lineChartColours"
+                        [legend]="lineChartLegend"
+                        [chartType]="lineChartType"
+                        (chartHover)="chartHovered($event)"
+                        (chartClick)="chartClicked($event)"></base-chart>
+        </div>
+    </div>
+</div>
