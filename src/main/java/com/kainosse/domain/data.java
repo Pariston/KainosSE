@@ -1,8 +1,8 @@
-package com.redicle.domain;
+package com.kainosse.domain;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.sql.Date;
+import java.util.Date;
 
 @Entity
 @Table
@@ -10,15 +10,15 @@ import java.sql.Date;
 public class data {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private int id;
+
     private Date date;
     private double value;
 
     public data() {}
 
-    public data(int id, Date date, double value) {
-        this.id = id;
+    public data(Date date, double value) {
         this.date = date;
         this.value = value;
     }

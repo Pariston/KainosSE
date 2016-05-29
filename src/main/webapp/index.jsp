@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/primeui/themes/omega/theme.css" />
+    <link rel="stylesheet" type="text/css" href="app/resources/icons/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="node_modules/primeui/primeui-ng-all.min.css" />
+    <link rel="stylesheet" type="text/css" href="app/resources/css/site.css"/>
     <!-- 1. Load libraries -->
     <!-- Polyfill(s) for older browsers -->
+    <script src="bower_components/Chart.js/Chart.js"></script>
     <script src="node_modules/core-js/client/shim.min.js"></script>
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
