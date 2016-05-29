@@ -25,7 +25,7 @@ export class HomePageComponent implements OnInit {
     toHandDate: string;
 
     public chartValues:Array<any> = [
-        { data: [], label: 'Wartość jednostki' }
+        { data: [], label: 'Unit value' }
     ];
 
     public lineChartOptions:any = {

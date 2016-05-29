@@ -20,7 +20,7 @@ var HomePageComponent = (function () {
         this.http = http;
         this.chartMonths = [];
         this.chartValues = [
-            { data: [], label: 'Wartość jednostki' }
+            { data: [], label: 'Unit value' }
         ];
         this.lineChartOptions = {
             animation: false,
