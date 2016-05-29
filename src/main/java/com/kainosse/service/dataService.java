@@ -26,6 +26,11 @@ public class dataService {
         return row;
     }
 
+    public void removeDataByID(data d) {
+        em.getTransaction().begin();
+        em.remove(d);
+    }
+
     public List<data> getAllData() {
         return em.createQuery("SELECT row FROM data row").getResultList();
     }
